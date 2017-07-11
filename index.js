@@ -15,22 +15,22 @@ var level = LEVELS.LOG;
  */
 
 function error (...args) {
-  if (level > LEVELS.ERROR) return;
+  if (level < LEVELS.ERROR) return;
 	console.error('<3>', ...args);
 };
  
 function warn (...args) {
-  if (level > LEVELS.WARN) return;
+  if (level < LEVELS.WARN) return;
 	console.warn('<4>', ...args);
 };
 
 function info (...args) {
-  if (level > LEVELS.INFO) return;
+  if (level < LEVELS.INFO) return;
 	console.info('<6>', ...args);
 };
 
 function log (...args) {
-  if (level > LEVELS.LOG) return;
+  if (level < LEVELS.LOG) return;
 	console.log('<7>', ...args);
 };
 
